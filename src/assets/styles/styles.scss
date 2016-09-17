@@ -77,7 +77,6 @@ body {
 					height: 95vh;
 					.boardRow {
 						position: relative;
-						left: 2.5%;
 						background-color: transparent;
 						clear: right;
 						.contain {
@@ -105,9 +104,6 @@ body {
 							background-color: transparent;
 						}
 						.cellAlive {
-							// background-color: $raspberry;
-							// background-color: #FF3D48;
-							// background-color: #87FFB5;
 							background-color: $betterPink;
 							// background-color: #FF9704;
 							box-shadow: inset 0px 0px 0px .25px $darkBlue;
