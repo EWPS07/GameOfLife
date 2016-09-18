@@ -243,7 +243,7 @@ class Game extends React.Component {
 			<div>
 				<div id='game'>
 					<Row>
-						<Col xs={3}>
+						<Col className='mobileClear' xs={3}>
 							<ControlPanel roundCount={this.state.roundCount}randomSymmetricalPattern={this.randomSymmetricalPattern.bind(this)}randomize={this.randomize.bind(this)}start={this.start.bind(this)} pause={this.pause.bind(this)}reset={this.reset.bind(this)} deadBoard={this.deadBoard.bind(this)} update={this.update.bind(this)}></ControlPanel>
 						</Col>
 						<Col xs={9}>

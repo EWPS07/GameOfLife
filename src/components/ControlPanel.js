@@ -28,14 +28,16 @@ class ControlPanel extends React.Component {
 					<br/>
 					<span>Generation: <span id='gen'>{this.props.roundCount}</span></span>
 				</div>
-				<h2>How it works</h2>
-				<span className='lineBreak'>Any living cell with fewer than 2 live neighbors dies</span>
-				<br/>
-				<span className='lineBreak'>Any living cell with 2 or 3 living neighbors lives on to the next round</span>
-				<br/>
-				<span className='lineBreak'>Any living cell with more than 3 living neighbors dies</span>
-				<br/>
-				<span className='lineBreak'>Any dead cell with exactly 3 living neighbors becomes alive</span>
+				<div id='info'>
+					<h2>How it works</h2>
+					<span className='lineBreak'>Any living cell with fewer than 2 live neighbors dies</span>
+					<br/>
+					<span className='lineBreak'>Any living cell with 2 or 3 living neighbors lives on to the next round</span>
+					<br/>
+					<span className='lineBreak'>Any living cell with more than 3 living neighbors dies</span>
+					<br/>
+					<span className='lineBreak'>Any dead cell with exactly 3 living neighbors becomes alive</span>
+				</div>
 			</div>
 		)
 	}

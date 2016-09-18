@@ -12,39 +12,43 @@ class Gameboard extends React.Component {
  	render() {
  		let board = this.props.board
 		return(
-			<div onClick={this.props.update}id='board'>
-				{
-					this.props.board.map(function(row, index) {
-						let currRow = index
-						return(
-							<Row className='boardRow'key={index}>
-								{
-									row.map(function(col, index) {
-										var killResurect = function() {
-											if(board[currRow][index] === 1) {
-												board[currRow][index] = 0
+			<div id='containBoard'>
+				<div className='centerBoard'></div>
+				<div onClick={this.props.update}id='board'>
+					{
+						this.props.board.map(function(row, index) {
+							let currRow = index
+							return(
+								<Row className='boardRow'key={index}>
+									{
+										row.map(function(col, index) {
+											var killResurect = function() {
+												if(board[currRow][index] === 1) {
+													board[currRow][index] = 0
+												}
+												else {
+													board[currRow][index] = 1
+												}
+											}
+											if(col === 1) {
+												return(
+													<div onClick={killResurect}className='cellAlive'key={index}></div>
+												)
 											}
 											else {
-												board[currRow][index] = 1
+												return(
+													<div onClick={killResurect}className='cellDead'key={index}></div>
+												)
+											
 											}
-										}
-										if(col === 1) {
-											return(
-												<div onClick={killResurect}className='cellAlive'key={index}></div>
-											)
-										}
-										else {
-											return(
-												<div onClick={killResurect}className='cellDead'key={index}></div>
-											)
-										
-										}
-									})
-								}
-							</Row>
-						)
-					})
-				}
+										})
+									}
+								</Row>
+							)
+						})
+					}
+				</div>
+				<div className='centerBoard'></div>
 			</div>
 		)
 	}
